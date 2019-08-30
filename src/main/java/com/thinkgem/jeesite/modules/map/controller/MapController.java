@@ -40,4 +40,30 @@ public class MapController {
     public String mapCustomize(){
         return "modules/map/mapCustomize";
     }
+
+    /**
+     * 百度地图的个性化样式
+     * @author chenguangju
+     * @date 2019/8/30 19:09
+     * @param
+     * @return java.lang.String
+     */
+    @RequiresPermissions("map:map:view")
+    @RequestMapping(value = "mapPersonalise")
+    public String mapPersonalise(){
+        return "modules/map/mapPersonalise";
+    }
+
+    /**
+     * 百度地图标注
+     * @author chenguangju
+     * @date 2019/8/30 19:10
+     * @param
+     * @return java.lang.String
+     */
+    @RequiresPermissions("map:map:view")
+    @RequestMapping(value = "mapLabel")
+    public String mapLabel(){
+        return "modules/map/mapLabel";
+    }
 }
