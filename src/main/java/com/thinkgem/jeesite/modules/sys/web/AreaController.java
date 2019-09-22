@@ -50,7 +50,9 @@ public class AreaController extends BaseController {
 
 	@RequiresPermissions("sys:area:view")
 	@RequestMapping(value = {"list", ""})
-	public String list(Area area, Model model) {
+	public String list(Area area, Model model) throws Exception {
+		List<String> list = areaService.getLngAndLat();
+		System.out.println(list);
 		model.addAttribute("list", areaService.findAll());
 		return "modules/sys/areaList";
 	}
